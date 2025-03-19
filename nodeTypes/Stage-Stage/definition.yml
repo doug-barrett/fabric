@@ -2,7 +2,7 @@ fileVersion: 1
 id: Stage
 isDisabled: false
 metadata:
-  defaultStorageLocation: null
+  defaultStorageLocation: SILVER
   error: null
   nodeMetadataSpec: |
 
@@ -47,7 +47,12 @@ metadata:
         attributeName: testsEnabled
         type: toggleButton
         default: true
-        
+
+      - displayName: Distinct
+        attributeName: selectDistinct
+        type: toggleButton
+        default: false   
+      
       - displayName: Pre-SQL
         attributeName: preSQL
         type: textBox
