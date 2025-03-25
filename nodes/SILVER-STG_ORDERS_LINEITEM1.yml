@@ -410,6 +410,23 @@ operation:
               - columnCounter: f6fed4e7-2221-4c92-9bfc-7d88c0d19383
                 stepCounter: 8d67e944-f8fd-4fe6-a1c3-e94f46ed5bca
             transform: ""
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 869696dc-8284-4a72-b58f-da44a8e21e9d
+          stepCounter: 481f746f-147c-4a31-a650-9a398cce07aa
+        config: {}
+        dataType: VARCHAR(8000)
+        description: ""
+        name: C_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f8d2f3ee-17b2-4e8e-8d30-1aac1bb54617
+                stepCounter: 350dd927-b8e6-4735-8249-8cb859087a1a
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

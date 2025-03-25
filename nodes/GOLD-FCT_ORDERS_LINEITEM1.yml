@@ -446,6 +446,23 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(GETDATE() AS DATETIME2(3))
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 874c5283-d679-4468-9757-7e0b3cc20562
+          stepCounter: 71315505-425d-43b8-aac8-4fbc0608df25
+        config: {}
+        dataType: VARCHAR(8000)
+        description: ""
+        name: C_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 869696dc-8284-4a72-b58f-da44a8e21e9d
+                stepCounter: 481f746f-147c-4a31-a650-9a398cce07aa
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

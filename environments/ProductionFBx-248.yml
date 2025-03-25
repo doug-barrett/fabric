@@ -1,14 +1,14 @@
 fileVersion: 1
-id: "246"
+id: "248"
 mappingDefinitions:
   BRONZE:
     database: COALESCE_DEV
     schema: doug_bronze
   GOLD:
     database: COALESCE_DEV
-    schema: doug_gold_test
+    schema: doug_gold_prod
   SILVER:
     database: COALESCE_DEV
-    schema: doug_silver_test
-name: System Test FBx
+    schema: doug_silver_prod
+name: Production FBx
 type: Environment

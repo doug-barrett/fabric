@@ -28,7 +28,11 @@ operation:
         config: {}
         dataType: DECIMAL
         defaultValue: ""
-        description: ""
+        description: |-
+          - This column is a system-generated surrogate key for the part dimension table.
+          - It serves as a unique identifier for each record in the dimension.
+          - Being a surrogate key, it has no direct source but is essential for joins and relationships with other tables in the data warehouse.
+          - It is used in downstream processes to uniquely identify part dimension records, specifically in reporting and data analysis.
         isSurrogateKey: true
         name: DIM_PART_KEY
         nullable: true
@@ -41,7 +45,11 @@ operation:
           stepCounter: 61db1949-29a5-46db-8645-e630c8851186
         config: {}
         dataType: DECIMAL(38,6)
-        description: ""
+        description: |-
+          - This column, 'P_PARTKEY', represents the part key from the source table 'STG_PART'.
+          - It is a business key, uniquely identifying each part.
+          - This column is extracted directly from the source without any transformation and loaded into the dimension table.
+          - It plays a vital role in linking part information across different systems and enabling accurate reporting on part-specific metrics.
         isBusinessKey: true
         name: P_PARTKEY
         nullable: true
@@ -56,7 +64,11 @@ operation:
           stepCounter: 61db1949-29a5-46db-8645-e630c8851186
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          - This column, 'P_NAME', represents the name of the part.
+          - It is sourced directly from the 'P_NAME' column in the 'STG_PART' stage table.
+          - The column is loaded without any transformations.
+          - This attribute is crucial for providing descriptive information about parts in reports and analyses, aiding in understanding part characteristics.
         name: P_NAME
         nullable: true
         sourceColumnReferences:
@@ -70,7 +82,11 @@ operation:
           stepCounter: 61db1949-29a5-46db-8645-e630c8851186
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          - This column, 'P_MFGR', represents the manufacturer of the part.
+          - It is sourced directly from the 'P_MFGR' column in the 'STG_PART' stage table.
+          - The column is loaded without any transformations.
+          - This information is essential for analyzing sales and performance based on different manufacturers and for supply chain management.
         name: P_MFGR
         nullable: true
         sourceColumnReferences:
@@ -84,7 +100,11 @@ operation:
           stepCounter: 61db1949-29a5-46db-8645-e630c8851186
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          - This column, 'P_BRAND', represents the brand of the part.
+          - It is sourced directly from the 'P_BRAND' column in the 'STG_PART' stage table.
+          - The column is loaded without any transformations.
+          - This attribute is valuable for market basket analysis, brand performance reporting, and understanding customer preferences.
         name: P_BRAND
         nullable: true
         sourceColumnReferences:
@@ -98,7 +118,11 @@ operation:
           stepCounter: 61db1949-29a5-46db-8645-e630c8851186
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          - This column, 'P_TYPE', represents the type of the part.
+          - It is sourced directly from the 'P_TYPE' column in the 'STG_PART' stage table.
+          - The column is loaded without any transformations.
+          - Part type is a key attribute for categorizing inventory, analyzing sales trends by product category, and optimizing stock levels.
         name: P_TYPE
         nullable: true
         sourceColumnReferences:
@@ -112,7 +136,11 @@ operation:
           stepCounter: 61db1949-29a5-46db-8645-e630c8851186
         config: {}
         dataType: DECIMAL(38,6)
-        description: ""
+        description: |-
+          - This column, 'P_SIZE', represents the size of the part.
+          - It is sourced directly from the 'P_SIZE' column in the 'STG_PART' stage table.
+          - The column is loaded without any transformations.
+          - Part size is important for logistics, warehouse management, and determining compatibility with other components or systems.
         name: P_SIZE
         nullable: true
         sourceColumnReferences:
@@ -126,7 +154,11 @@ operation:
           stepCounter: 61db1949-29a5-46db-8645-e630c8851186
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          - This column, 'P_CONTAINER', represents the container type of the part.
+          - It is sourced directly from the 'P_CONTAINER' column in the 'STG_PART' stage table.
+          - The column is loaded without any transformations.
+          - This attribute is useful for optimizing shipping and storage, as well as ensuring proper handling and disposal procedures.
         name: P_CONTAINER
         nullable: true
         sourceColumnReferences:
@@ -140,7 +172,11 @@ operation:
           stepCounter: 61db1949-29a5-46db-8645-e630c8851186
         config: {}
         dataType: DECIMAL(38,6)
-        description: ""
+        description: |-
+          - This column, 'P_RETAILPRICE', represents the retail price of the part.
+          - It is sourced directly from the 'P_RETAILPRICE' column in the 'STG_PART' stage table.
+          - The column is loaded without any transformations.
+          - Retail price is a key metric for revenue analysis, pricing strategy, and profitability calculations.
         name: P_RETAILPRICE
         nullable: true
         sourceColumnReferences:
@@ -154,7 +190,11 @@ operation:
           stepCounter: 61db1949-29a5-46db-8645-e630c8851186
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          - This column, 'P_COMMENT', provides descriptive comments or notes about the part.
+          - It is sourced directly from the 'P_COMMENT' column in the 'STG_PART' stage table.
+          - The column is loaded without any transformations.
+          - This attribute can provide additional context or special considerations for each part, aiding in decision-making and problem-solving.
         name: P_COMMENT
         nullable: true
         sourceColumnReferences:
@@ -172,7 +212,11 @@ operation:
         config: {}
         dataType: DECIMAL
         defaultValue: ""
-        description: ""
+        description: |-
+          - This column is a system-generated version number for each record in the dimension.
+          - It tracks changes over time, allowing for historical analysis and auditing.
+          - The column is automatically populated by the system.
+          - It is incremented with each update to the record, enabling users to identify the most recent version and trace the evolution of data.
         isSystemVersion: true
         name: SYSTEM_VERSION
         nullable: true
@@ -189,7 +233,11 @@ operation:
         config: {}
         dataType: VARCHAR(1)
         defaultValue: ""
-        description: ""
+        description: |-
+          - This column is a system-generated flag indicating whether a record is the current version.
+          - It simplifies identifying the most up-to-date information for a given entity.
+          - The column is automatically managed by the system.
+          - It is used in queries to filter for current records, ensuring reports and applications use the most accurate and relevant data.
         isSystemCurrentFlag: true
         name: SYSTEM_CURRENT_FLAG
         nullable: true
@@ -206,7 +254,11 @@ operation:
         config: {}
         dataType: DATETIME2(3)
         defaultValue: ""
-        description: ""
+        description: |-
+          - This column is a system-generated timestamp indicating when a record became active or valid.
+          - It is automatically populated with the current date and time using the 'GETDATE()' function.
+          - The column is essential for tracking the history of changes in the dimension.
+          - It is a crucial component for implementing slowly changing dimension (SCD) type 2, enabling time-based analysis and reporting.
         isSystemStartDate: true
         name: SYSTEM_START_DATE
         nullable: true
@@ -223,7 +275,11 @@ operation:
         config: {}
         dataType: DATETIME2(3)
         defaultValue: ""
-        description: ""
+        description: |-
+          - This column is a system-generated timestamp indicating when a record is no longer active or valid.
+          - It is automatically populated with a default end date of '2999-12-31 00:00:00'.
+          - The column is essential for tracking the history of changes in the dimension.
+          - Along with 'SYSTEM_START_DATE', it enables time-based filtering and analysis, supporting slowly changing dimension (SCD) type 2 implementation.
         isSystemEndDate: true
         name: SYSTEM_END_DATE
         nullable: true
@@ -240,7 +296,11 @@ operation:
         config: {}
         dataType: DATETIME2(3)
         defaultValue: ""
-        description: ""
+        description: |-
+          - This column is a system-generated timestamp indicating when a record was first created.
+          - It is automatically populated with the current date and time using the 'GETDATE()' function.
+          - The column is useful for auditing and tracking the origin of data.
+          - It provides insights into the data loading process and can be used to identify the age of records.
         isSystemCreateDate: true
         name: SYSTEM_CREATE_DATE
         nullable: true
@@ -257,7 +317,11 @@ operation:
         config: {}
         dataType: DATETIME2(3)
         defaultValue: ""
-        description: ""
+        description: |-
+          - This column is a system-generated timestamp indicating when a record was last updated.
+          - It is automatically populated with the current date and time using the 'GETDATE()' function.
+          - The column is useful for auditing and tracking data modifications.
+          - It helps identify when changes were made to a record and supports data quality monitoring.
         isSystemUpdateDate: true
         name: SYSTEM_UPDATE_DATE
         nullable: true
