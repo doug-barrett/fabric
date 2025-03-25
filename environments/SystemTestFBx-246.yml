@@ -1,0 +1,14 @@
+fileVersion: 1
+id: "246"
+mappingDefinitions:
+  BRONZE:
+    database: COALESCE_DEV
+    schema: doug_bronze_dev
+  GOLD:
+    database: COALESCE_TEST
+    schema: dbo
+  SILVER:
+    database: COALESCE_TEST
+    schema: dbo
+name: System Test FBx
+type: Environment
