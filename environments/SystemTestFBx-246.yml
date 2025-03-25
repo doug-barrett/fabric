@@ -3,12 +3,12 @@ id: "246"
 mappingDefinitions:
   BRONZE:
     database: COALESCE_DEV
-    schema: doug_bronze_dev
+    schema: doug_bronze
   GOLD:
-    database: COALESCE_TEST
-    schema: dbo
+    database: COALESCE_DEV
+    schema: doug_gold_test
   SILVER:
-    database: COALESCE_TEST
-    schema: dbo
+    database: COALESCE_DEV
+    schema: doug_silver_test
 name: System Test FBx
 type: Environment

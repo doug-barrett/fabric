@@ -1,5 +1,14 @@
 fileVersion: 1
 id: "248"
-mappingDefinitions: {}
+mappingDefinitions:
+  BRONZE:
+    database: COALESCE_DEV
+    schema: doug_bronze
+  GOLD:
+    database: COALESCE_DEV
+    schema: doug_gold_prod
+  SILVER:
+    database: COALESCE_DEV
+    schema: doug_silver_prod
 name: Production FBx
 type: Environment
