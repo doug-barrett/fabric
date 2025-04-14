@@ -184,21 +184,7 @@ operation:
     sourceMapping:
       - aliases: {}
         customSQL:
-          customSQL: |-
-            {{ stage('Override Create SQL') }}
-            	/*CREATE VIEW {{ ref('SILVER', 'STG_PART2')}} AS (*/
-            		SELECT 
-             "P_PARTKEY" AS "P_PARTKEY",
-             "P_NAME" AS "P_NAME",
-             "P_MFGR" AS "P_MFGR",
-             "P_BRAND" AS "P_BRAND",
-             "P_TYPE" AS "P_TYPE",
-             "P_SIZE" AS "P_SIZE",
-             "P_CONTAINER" AS "P_CONTAINER",
-             "P_RETAILPRICE" AS "P_RETAILPRICE",
-             "P_COMMENT" AS "P_COMMENT"
-             FROM {{ ref('BRONZE', 'PART') }}
-            	/*)*/
+          customSQL: ""
         dependencies:
           - locationName: BRONZE
             nodeName: PART
@@ -207,7 +193,7 @@ operation:
         name: STG_PART
         noLinkRefs: []
   name: STG_PART
-  overrideSQL: true
+  overrideSQL: false
   schema: ""
   sqlType: Stage
   type: sql
