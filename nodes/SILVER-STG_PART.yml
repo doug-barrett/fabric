@@ -14,7 +14,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: SILVER
-  materializationType: view
+  materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
