@@ -253,23 +253,6 @@ operation:
               - columnCounter: 81785598-e5ad-4ead-846c-dbc5c2f84aa5
                 stepCounter: 67622af4-f566-4833-8d31-c51b3167d736
             transform: ""
-      - acceptedValues:
-          strictMatch: false
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 352204bc-f42f-4c5b-935c-545cd3ea211a
-          stepCounter: 830f7b0d-17df-4a31-9bcd-d9ca87ce2775
-        config: {}
-        dataType: VARCHAR(8000)
-        description: ""
-        name: C_COMMENT1
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 191a94b9-9121-422f-8975-2de7d238cd69
-                stepCounter: 67622af4-f566-4833-8d31-c51b3167d736
-            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

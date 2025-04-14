@@ -46,7 +46,9 @@ operation:
         name: P_NAME
         nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 89ffbcb7-f13f-42b4-9e2c-7189bea2e76d
+                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
             transform: ""
         transform: ""
       - acceptedValues:
@@ -63,7 +65,9 @@ operation:
         name: P_MFGR
         nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: a3f54959-a6de-4bae-bffb-2afdbe704b01
+                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
             transform: ""
         transform: ""
       - acceptedValues:
@@ -80,7 +84,9 @@ operation:
         name: P_BRAND
         nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 657ebcd0-2bc1-489d-b39e-e63851b9c855
+                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
             transform: ""
         transform: ""
       - acceptedValues:
@@ -97,7 +103,9 @@ operation:
         name: P_TYPE
         nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 8a1e49fe-72d6-4dce-b549-39158ddcacc4
+                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
             transform: ""
         transform: ""
       - acceptedValues:
@@ -114,7 +122,9 @@ operation:
         name: P_SIZE
         nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: f18343df-78bd-4f48-90f2-828fe08a14e6
+                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
             transform: ""
         transform: ""
       - acceptedValues:
@@ -131,7 +141,9 @@ operation:
         name: P_CONTAINER
         nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 8159e92e-416e-48ac-b61a-df1030bf2834
+                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
             transform: ""
         transform: ""
       - acceptedValues:
@@ -148,7 +160,9 @@ operation:
         name: P_RETAILPRICE
         nullable: true
         sourceColumnReferences:
-          - columnReferences: []
+          - columnReferences:
+              - columnCounter: 05be8a83-f872-45eb-9b76-cb15600582ff
+                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
             transform: ""
         transform: ""
       - appliedColumnTests: {}
