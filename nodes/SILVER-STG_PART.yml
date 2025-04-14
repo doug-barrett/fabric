@@ -14,7 +14,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: SILVER
-  materializationType: table
+  materializationType: view
   metadata:
     appliedNodeTests: []
     columns:
@@ -32,104 +32,125 @@ operation:
               - columnCounter: 2d9e2213-3eb9-4deb-a5d0-dd9e2a7375d7
                 stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
             transform: ""
-      - appliedColumnTests: {}
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
         columnReference:
-          columnCounter: e269427e-dee0-4340-97a2-5b73e20eb2bc
+          columnCounter: 6809cd2f-c8cc-4fcd-8580-943ff67953a2
           stepCounter: 38c98251-8d1e-41ec-a602-68ac743d41f5
         config: {}
         dataType: VARCHAR(8000)
+        defaultValue: ""
         description: ""
         name: P_NAME
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 89ffbcb7-f13f-42b4-9e2c-7189bea2e76d
-                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
+          - columnReferences: []
             transform: ""
-      - appliedColumnTests: {}
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
         columnReference:
-          columnCounter: 50769167-9e11-4ba0-93fc-a56d442b5edd
+          columnCounter: cc4aae3f-5941-4110-9895-47c3207ff69e
           stepCounter: 38c98251-8d1e-41ec-a602-68ac743d41f5
         config: {}
         dataType: VARCHAR(8000)
+        defaultValue: ""
         description: ""
         name: P_MFGR
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: a3f54959-a6de-4bae-bffb-2afdbe704b01
-                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
+          - columnReferences: []
             transform: ""
-      - appliedColumnTests: {}
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
         columnReference:
-          columnCounter: 63221858-7de2-4050-9870-85d848336984
+          columnCounter: 9be0a0bc-8a6e-4eec-b591-09ee666576c3
           stepCounter: 38c98251-8d1e-41ec-a602-68ac743d41f5
         config: {}
         dataType: VARCHAR(8000)
+        defaultValue: ""
         description: ""
         name: P_BRAND
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 657ebcd0-2bc1-489d-b39e-e63851b9c855
-                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
+          - columnReferences: []
             transform: ""
-      - appliedColumnTests: {}
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
         columnReference:
-          columnCounter: 8516fc94-990c-4608-8b80-7c3cd2f25c4c
+          columnCounter: afe857b1-47ae-44b9-be77-f8c90c5628cd
           stepCounter: 38c98251-8d1e-41ec-a602-68ac743d41f5
         config: {}
         dataType: VARCHAR(8000)
+        defaultValue: ""
         description: ""
         name: P_TYPE
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 8a1e49fe-72d6-4dce-b549-39158ddcacc4
-                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
+          - columnReferences: []
             transform: ""
-      - appliedColumnTests: {}
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
         columnReference:
-          columnCounter: e591128d-05cb-4bb4-a741-47c78cd1e442
+          columnCounter: 84eecbd9-1f6c-45a6-b6bb-89b7dbb4e73d
           stepCounter: 38c98251-8d1e-41ec-a602-68ac743d41f5
         config: {}
         dataType: DECIMAL(38,6)
+        defaultValue: ""
         description: ""
         name: P_SIZE
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: f18343df-78bd-4f48-90f2-828fe08a14e6
-                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
+          - columnReferences: []
             transform: ""
-      - appliedColumnTests: {}
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
         columnReference:
-          columnCounter: 03bed75e-8ce3-489a-b241-e43129e6510f
+          columnCounter: f9946ac7-2f5b-4304-a112-5944c4735aad
           stepCounter: 38c98251-8d1e-41ec-a602-68ac743d41f5
         config: {}
         dataType: VARCHAR(8000)
+        defaultValue: ""
         description: ""
         name: P_CONTAINER
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 8159e92e-416e-48ac-b61a-df1030bf2834
-                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
+          - columnReferences: []
             transform: ""
-      - appliedColumnTests: {}
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
         columnReference:
-          columnCounter: 4e7086fd-da1a-46c6-8429-448541a2f50f
+          columnCounter: 7f5d2363-113e-4c0a-a549-01f40049bad9
           stepCounter: 38c98251-8d1e-41ec-a602-68ac743d41f5
         config: {}
         dataType: DECIMAL(38,6)
+        defaultValue: ""
         description: ""
         name: P_RETAILPRICE
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 05be8a83-f872-45eb-9b76-cb15600582ff
-                stepCounter: 9b602988-95bc-4b23-b6d7-19b10bd90eae
+          - columnReferences: []
             transform: ""
+        transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: dbc54198-9185-4e7e-b02c-65072fa4a49c
@@ -149,7 +170,21 @@ operation:
     sourceMapping:
       - aliases: {}
         customSQL:
-          customSQL: ""
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	/*CREATE VIEW {{ ref('SILVER', 'STG_PART2')}} AS (*/
+            		SELECT 
+             "P_PARTKEY" AS "P_PARTKEY",
+             "P_NAME" AS "P_NAME",
+             "P_MFGR" AS "P_MFGR",
+             "P_BRAND" AS "P_BRAND",
+             "P_TYPE" AS "P_TYPE",
+             "P_SIZE" AS "P_SIZE",
+             "P_CONTAINER" AS "P_CONTAINER",
+             "P_RETAILPRICE" AS "P_RETAILPRICE",
+             "P_COMMENT" AS "P_COMMENT"
+             FROM {{ ref('BRONZE', 'PART') }}
+            	/*)*/
         dependencies:
           - locationName: BRONZE
             nodeName: PART
@@ -158,7 +193,7 @@ operation:
         name: STG_PART
         noLinkRefs: []
   name: STG_PART
-  overrideSQL: false
+  overrideSQL: true
   schema: ""
   sqlType: Stage
   type: sql

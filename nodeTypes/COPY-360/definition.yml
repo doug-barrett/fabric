@@ -1,0 +1,13 @@
+fileVersion: 1
+id: "360"
+isDisabled: false
+metadata:
+  defaultStorageLocation: null
+  error: null
+  nodeMetadataSpec: |-
+    capitalized: COPY
+    short: NEW
+    tagColor: gray
+    plural: New Types
+name: COPY
+type: NodeType

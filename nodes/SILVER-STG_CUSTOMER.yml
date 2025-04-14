@@ -24,7 +24,11 @@ operation:
           stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
         config: {}
         dataType: DECIMAL(38,6)
-        description: ""
+        description: |-
+          The customer key, sourced from the 'C_CUSTKEY' column of the 'CUSTOMER' table in the Bronze layer, uniquely identifies each customer. 
+          - As a primary identifier, it links customer information across various systems and supports customer-centric analyses.
+          - This column is essential for creating customer-level reports, segmenting customer data, and calculating customer-related KPIs.
+          - Data engineers can use this to establish relationships with other tables and ensure data integrity across the data warehouse.
         name: C_CUSTKEY
         nullable: true
         sourceColumnReferences:
@@ -38,7 +42,11 @@ operation:
           stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          The customer name, derived from the 'C_NAME' column in the 'CUSTOMER' table (Bronze layer), represents the name of the customer.
+          - The transformation 'UPPER' is applied to convert names to uppercase.
+          - This column is used in customer identification, personalized marketing campaigns, and customer service applications.
+          - It supports creating customer lists, filtering customers by name, and improving data consistency for reporting purposes.
         name: C_NAME
         nullable: true
         sourceColumnReferences:
@@ -52,7 +60,11 @@ operation:
           stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          The customer address, sourced from the 'C_ADDRESS' column of the 'CUSTOMER' table in the Bronze layer, indicates the physical address of the customer.
+          - It is used for location-based analysis, targeted marketing, and shipping logistics.
+          - This column can be used to generate reports on customer distribution, calculate regional sales metrics, and improve delivery efficiency.
+          - The column is directly sourced without transformations.
         name: C_ADDRESS
         nullable: true
         sourceColumnReferences:
@@ -66,7 +78,11 @@ operation:
           stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
         config: {}
         dataType: DECIMAL(38,6)
-        description: ""
+        description: |-
+          The nation key, sourced from the 'C_NATIONKEY' column of the 'CUSTOMER' table in the Bronze layer, is a foreign key that links to the 'NATION' table.
+          - It represents the nation in which the customer resides and enables geographic segmentation of customer data.
+          - It can be used to generate reports on sales by nation, analyze customer demographics, and support international marketing strategies.
+          - As a foreign key, it ensures referential integrity between the 'CUSTOMER' and 'NATION' tables.
         name: C_NATIONKEY
         nullable: true
         sourceColumnReferences:
@@ -80,7 +96,11 @@ operation:
           stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          The customer phone number, sourced from the 'C_PHONE' column of the 'CUSTOMER' table in the Bronze layer, represents the contact number for the customer.
+          - It is used for direct communication, customer support, and marketing campaigns.
+          - This column enables customer outreach programs, facilitates customer service interactions, and helps maintain accurate customer contact information.
+          - The column is directly sourced without transformations.
         name: C_PHONE
         nullable: true
         sourceColumnReferences:
@@ -94,7 +114,11 @@ operation:
           stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
         config: {}
         dataType: DECIMAL(38,6)
-        description: ""
+        description: |-
+          The customer account balance, sourced from the 'C_ACCTBAL' column of the 'CUSTOMER' table in the Bronze layer, indicates the current balance of the customer's account.
+          - It is used for financial analysis, credit risk assessment, and customer segmentation based on account value.
+          - This column supports generating reports on customer account distribution, calculating average account balances, and identifying high-value customers.
+          - The column is directly sourced without transformations.
         name: C_ACCTBAL
         nullable: true
         sourceColumnReferences:
@@ -108,7 +132,11 @@ operation:
           stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          The market segment, sourced from the 'C_MKTSEGMENT' column of the 'CUSTOMER' table in the Bronze layer, categorizes customers based on their market segment.
+          - It enables targeted marketing campaigns, product development, and sales strategies tailored to specific market segments.
+          - This column supports analyzing sales performance by market segment, identifying growth opportunities, and optimizing marketing spend.
+          - The column is directly sourced without transformations.
         name: C_MKTSEGMENT
         nullable: true
         sourceColumnReferences:
@@ -122,7 +150,11 @@ operation:
           stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          The customer comment, sourced from the 'C_COMMENT' column of the 'CUSTOMER' table in the Bronze layer, contains descriptive information or notes about the customer.
+          - It is used for additional customer insights, special handling instructions, or tracking specific customer requirements.
+          - This column enables personalized customer service, helps resolve customer issues, and provides context for customer interactions.
+          - The column is directly sourced without transformations.
         name: C_COMMENT
         nullable: true
         sourceColumnReferences:
@@ -140,7 +172,11 @@ operation:
         config: {}
         dataType: VARCHAR(8000)
         defaultValue: ""
-        description: ""
+        description: |-
+          The customer category, derived from the 'C_ACCTBAL' column of the 'CUSTOMER' table, categorizes customers into 'HIGH' or 'LOW' based on their account balance.
+          - If the account balance is greater than 5000, the customer is categorized as 'HIGH'; otherwise, 'LOW'.
+          - This column is used for customer segmentation, targeted marketing, and differentiated service offerings.
+          - It supports analyzing customer behavior by category, identifying high-value customers, and tailoring marketing strategies.
         keyColumnType: None
         name: CUST_CAT
         nullable: true
@@ -159,7 +195,11 @@ operation:
           stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          The nation name, sourced from the 'N_NAME' column of the 'NATION' table in the Bronze layer, represents the name of the nation.
+          - It is used for geographic analysis, international reporting, and understanding global market trends.
+          - This column supports generating reports on sales by nation, analyzing demographic data, and developing international business strategies.
+          - The column is directly sourced without transformations.
         name: NATION
         nullable: true
         sourceColumnReferences:
@@ -176,7 +216,11 @@ operation:
           stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
         config: {}
         dataType: VARCHAR(8000)
-        description: ""
+        description: |-
+          The customer comment, sourced from the 'C_COMMENT' column of the 'CUSTOMER' table in the Bronze layer, contains descriptive information or notes about the customer.
+          - It is used for additional customer insights, special handling instructions, or tracking specific customer requirements.
+          - This column enables personalized customer service, helps resolve customer issues, and provides context for customer interactions.
+          - The column is directly sourced without transformations.
         name: C_COMMENT1
         nullable: true
         sourceColumnReferences:
@@ -184,6 +228,33 @@ operation:
               - columnCounter: eac1a918-539d-49ae-af20-7956a28f32ea
                 stepCounter: e2105a9e-7076-4f7f-90b3-783e55e7eb11
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7e9361e-fc50-47f2-b364-5e270854e5e0
+          stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
+        config: {}
+        dataType: VARBINARY(8000)
+        defaultValue: ""
+        description: ""
+        hashDetails:
+          hashAlgorithm: SHA1
+        hashedColumns:
+          - columnCounter: 68a78d4c-808a-4ee6-ac2b-e06df65774f4
+            stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
+          - columnCounter: 4746e9d4-22c8-4efa-a36d-4aae6226fa4d
+            stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
+          - columnCounter: b62ae415-579d-4e7a-9bd7-735326f79a52
+            stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
+          - columnCounter: f334bdad-dd0d-4943-afb3-0298059c20f8
+            stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
+          - columnCounter: 740c69f6-d243-438f-89c8-601e215a6c45
+            stepCounter: 1678afb8-62ca-43ed-a879-d0e4f1e8728e
+        name: CUSTOMER_HASH
+        nullable: true
+        sourceColumnReferences: []
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
