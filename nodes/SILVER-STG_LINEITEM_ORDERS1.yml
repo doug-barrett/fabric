@@ -90,21 +90,19 @@ operation:
               - columnCounter: a22a0ed3-7572-4881-bf6f-326c39d928a2
                 stepCounter: d801f8dd-8b4e-44ab-b0f3-58b7604e44ea
             transform: ""
-      - appliedColumnTests:
-          hasNull: false
-          isDistinct: false
+      - appliedColumnTests: {}
         columnReference:
-          columnCounter: c750805b-733e-44a7-9d5d-68ae70643029
+          columnCounter: 90c78f81-c217-47a9-a45b-767d67c39778
           stepCounter: 9e919383-0d14-49d2-a958-08249aae8e12
         config: {}
         dataType: DECIMAL
         description: ""
-        name: DIM_SUPPLIER_KEY
+        name: DIM_ORDERS_KEY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: d08c6a27-8d41-49c6-9774-2066bd53774b
-                stepCounter: 11f043e2-e8f6-4551-8717-ac7597fd8aed
+              - columnCounter: 6a31c152-5f4b-4d16-82a2-23cf768ebce6
+                stepCounter: b50b7738-3e02-4f66-900e-8dd842f39afa
             transform: ""
       - appliedColumnTests:
           hasNull: false
@@ -362,70 +360,6 @@ operation:
               - columnCounter: c36e6035-6237-437e-acd9-5b6eab560947
                 stepCounter: f7186b42-8687-431b-8261-07a75efec9d1
             transform: ""
-      - appliedColumnTests:
-          hasNull: false
-          isDistinct: false
-        columnReference:
-          columnCounter: 28d01e4e-6a5d-4cb9-bbe7-b3b7bb9e80bc
-          stepCounter: 9e919383-0d14-49d2-a958-08249aae8e12
-        config: {}
-        dataType: VARCHAR(8000)
-        description: ""
-        name: O_ORDERSTATUS
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 84490a44-4aed-4d66-a88f-f1e9e41070cf
-                stepCounter: f7186b42-8687-431b-8261-07a75efec9d1
-            transform: ""
-      - appliedColumnTests:
-          hasNull: false
-          isDistinct: false
-        columnReference:
-          columnCounter: f1257cb7-73bd-4731-9ed6-f2addad54e6c
-          stepCounter: 9e919383-0d14-49d2-a958-08249aae8e12
-        config: {}
-        dataType: DECIMAL(38,6)
-        description: ""
-        name: O_TOTALPRICE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 28461f23-bdae-4921-9025-9787f31e701d
-                stepCounter: f7186b42-8687-431b-8261-07a75efec9d1
-            transform: ""
-      - appliedColumnTests:
-          hasNull: false
-          isDistinct: false
-        columnReference:
-          columnCounter: 92c40363-a55b-427a-bb94-a731e7c6a1f3
-          stepCounter: 9e919383-0d14-49d2-a958-08249aae8e12
-        config: {}
-        dataType: DATE
-        description: ""
-        name: O_ORDERDATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 61103104-1328-42cc-9092-a60f0958c02b
-                stepCounter: f7186b42-8687-431b-8261-07a75efec9d1
-            transform: ""
-      - appliedColumnTests:
-          hasNull: false
-          isDistinct: false
-        columnReference:
-          columnCounter: d8cd269e-942a-4977-b67d-d0188d999e76
-          stepCounter: 9e919383-0d14-49d2-a958-08249aae8e12
-        config: {}
-        dataType: VARCHAR(8000)
-        description: ""
-        name: O_ORDERPRIORITY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: d2d06ad3-c6b1-4dfc-99b4-fbe6579a96ba
-                stepCounter: f7186b42-8687-431b-8261-07a75efec9d1
-            transform: ""
     cteString: ""
     enabledColumnTestIDs:
       - hasNull
@@ -433,8 +367,8 @@ operation:
     sourceMapping:
       - aliases:
           DIM_CUSTOMER: 67622af4-f566-4833-8d31-c51b3167d736
+          DIM_ORDERS: b50b7738-3e02-4f66-900e-8dd842f39afa
           DIM_PART: d801f8dd-8b4e-44ab-b0f3-58b7604e44ea
-          DIM_SUPPLIER: 11f043e2-e8f6-4551-8717-ac7597fd8aed
           STG_LINEITEM_ORDERS: f7186b42-8687-431b-8261-07a75efec9d1
         customSQL:
           customSQL: ""
@@ -442,9 +376,9 @@ operation:
           - locationName: GOLD
             nodeName: DIM_CUSTOMER
           - locationName: GOLD
-            nodeName: DIM_PART
+            nodeName: DIM_ORDERS
           - locationName: GOLD
-            nodeName: DIM_SUPPLIER
+            nodeName: DIM_PART
           - locationName: SILVER
             nodeName: STG_LINEITEM_ORDERS
         join:
@@ -454,8 +388,8 @@ operation:
             ON [STG_LINEITEM_ORDERS].[O_CUSTKEY] = [DIM_CUSTOMER].[C_CUSTKEY]
             LEFT JOIN {{ ref('GOLD', 'DIM_PART') }} [DIM_PART]
             ON [STG_LINEITEM_ORDERS].[L_PARTKEY] = [DIM_PART].[P_PARTKEY]
-            LEFT JOIN {{ ref('GOLD', 'DIM_SUPPLIER') }} [DIM_SUPPLIER]
-            ON [STG_LINEITEM_ORDERS].[L_SUPPKEY] = [DIM_SUPPLIER].[S_SUPPKEY]
+            LEFT JOIN {{ ref('GOLD', 'DIM_ORDERS')}} [DIM_ORDERS]
+            ON [STG_LINEITEM_ORDERS].[L_ORDERKEY] = [DIM_ORDERS].[O_ORDERKEY]
         name: STG_LINEITEM_ORDERS1
         noLinkRefs: []
   name: STG_LINEITEM_ORDERS1

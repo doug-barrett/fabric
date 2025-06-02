@@ -1,13 +1,11 @@
 fileVersion: 1
 id: 5f357cf1-3f59-4d76-90c0-2e16c3a704aa
-name: FCT_LINEITEM_ORDERS1
+name: FCT_ORDER_LINES
 operation:
   config:
     insertStrategy: UNION ALL
     postSQL: ""
-    preSQL: |-
-      DELETE FROM {{this}}
-      WHERE O_ORDERDATE > '{{parameters.process_date}}'
+    preSQL: ""
     selectDistinct: false
     testsEnabled: false
     truncateBefore: false
@@ -80,16 +78,16 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: bdb4c197-1ab0-458a-b031-66647cd669f4
+          columnCounter: 8297e8b3-a291-4a5b-9278-864d9412d611
           stepCounter: 5f357cf1-3f59-4d76-90c0-2e16c3a704aa
         config: {}
         dataType: DECIMAL
         description: ""
-        name: DIM_SUPPLIER_KEY
+        name: DIM_ORDERS_KEY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: c750805b-733e-44a7-9d5d-68ae70643029
+              - columnCounter: 90c78f81-c217-47a9-a45b-767d67c39778
                 stepCounter: 9e919383-0d14-49d2-a958-08249aae8e12
             transform: ""
       - appliedColumnTests: {}
@@ -316,62 +314,6 @@ operation:
               - columnCounter: e1e80177-6d55-4ca7-8f07-ab44ec98618e
                 stepCounter: 9e919383-0d14-49d2-a958-08249aae8e12
             transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: c3919501-e0c9-4485-adce-b85392695c9a
-          stepCounter: 5f357cf1-3f59-4d76-90c0-2e16c3a704aa
-        config: {}
-        dataType: VARCHAR(8000)
-        description: ""
-        name: O_ORDERSTATUS
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 28d01e4e-6a5d-4cb9-bbe7-b3b7bb9e80bc
-                stepCounter: 9e919383-0d14-49d2-a958-08249aae8e12
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 7029e8ea-cc83-425a-98b6-72742043e2f0
-          stepCounter: 5f357cf1-3f59-4d76-90c0-2e16c3a704aa
-        config: {}
-        dataType: DECIMAL(38,6)
-        description: ""
-        name: O_TOTALPRICE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: f1257cb7-73bd-4731-9ed6-f2addad54e6c
-                stepCounter: 9e919383-0d14-49d2-a958-08249aae8e12
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 8fdc6c0f-1769-42be-ac9d-e8bcfb337445
-          stepCounter: 5f357cf1-3f59-4d76-90c0-2e16c3a704aa
-        config: {}
-        dataType: DATE
-        description: ""
-        name: O_ORDERDATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 92c40363-a55b-427a-bb94-a731e7c6a1f3
-                stepCounter: 9e919383-0d14-49d2-a958-08249aae8e12
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: dde98d0b-6dda-47e0-9edc-db4c402c4811
-          stepCounter: 5f357cf1-3f59-4d76-90c0-2e16c3a704aa
-        config: {}
-        dataType: VARCHAR(8000)
-        description: ""
-        name: O_ORDERPRIORITY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: d8cd269e-942a-4977-b67d-d0188d999e76
-                stepCounter: 9e919383-0d14-49d2-a958-08249aae8e12
-            transform: ""
       - acceptedValues:
           strictMatch: true
           values: []
@@ -417,9 +359,9 @@ operation:
             nodeName: STG_LINEITEM_ORDERS1
         join:
           joinCondition: FROM {{ ref('SILVER', 'STG_LINEITEM_ORDERS1') }} [STG_LINEITEM_ORDERS1]
-        name: FCT_LINEITEM_ORDERS1
+        name: FCT_ORDER_LINES
         noLinkRefs: []
-  name: FCT_LINEITEM_ORDERS1
+  name: FCT_ORDER_LINES
   overrideSQL: false
   schema: ""
   sqlType: Fact
