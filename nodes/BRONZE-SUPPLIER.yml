@@ -1,0 +1,135 @@
+fileVersion: 1
+id: 62742eb9-b14c-460a-8600-cfe9f0a671c8
+name: SUPPLIER
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3adadd8e-9e45-43c8-9a73-ecb68d4c40b4
+          stepCounter: 62742eb9-b14c-460a-8600-cfe9f0a671c8
+        config: {}
+        dataType: DECIMAL(38,6)
+        defaultValue: ""
+        description: ""
+        name: S_SUPPKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c3e702f7-f221-4f1a-a5ea-af3dbc645ebf
+          stepCounter: 62742eb9-b14c-460a-8600-cfe9f0a671c8
+        config: {}
+        dataType: VARCHAR(8000)
+        defaultValue: ""
+        description: ""
+        name: S_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8ed2d5bc-2324-4848-b794-3dae97ccff3c
+          stepCounter: 62742eb9-b14c-460a-8600-cfe9f0a671c8
+        config: {}
+        dataType: VARCHAR(8000)
+        defaultValue: ""
+        description: ""
+        name: S_ADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d13466f1-3314-45ba-9808-7cb9eb92e908
+          stepCounter: 62742eb9-b14c-460a-8600-cfe9f0a671c8
+        config: {}
+        dataType: DECIMAL(38,6)
+        defaultValue: ""
+        description: ""
+        name: S_NATIONKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b56cecd7-b6fc-4817-87bd-52890a2d46e5
+          stepCounter: 62742eb9-b14c-460a-8600-cfe9f0a671c8
+        config: {}
+        dataType: VARCHAR(8000)
+        defaultValue: ""
+        description: ""
+        name: S_PHONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 70d3f01c-b6b4-44af-b04f-1f7ceca00586
+          stepCounter: 62742eb9-b14c-460a-8600-cfe9f0a671c8
+        config: {}
+        dataType: DECIMAL(38,6)
+        defaultValue: ""
+        description: ""
+        name: S_ACCTBAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6bdffaf2-59b4-444f-8524-c9f618d04af0
+          stepCounter: 62742eb9-b14c-460a-8600-cfe9f0a671c8
+        config: {}
+        dataType: VARCHAR(8000)
+        defaultValue: ""
+        description: ""
+        name: S_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: SUPPLIER
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
