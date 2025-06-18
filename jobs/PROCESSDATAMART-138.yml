@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "138"
+includeSelector: "+{ location: GOLD name: FCT_* }+"
+name: PROCESS DATA MART
+type: Job
