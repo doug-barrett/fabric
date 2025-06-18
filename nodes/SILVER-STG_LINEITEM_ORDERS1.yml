@@ -71,8 +71,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 4ee84fbd-b828-4b03-8867-4777acc4c448
-                stepCounter: 67622af4-f566-4833-8d31-c51b3167d736
+              - columnCounter: a214ce8c-7869-4de7-bda3-dfc003e2892a
+                stepCounter: 1562e67a-0352-40f6-aa42-f969fd29b441
             transform: ""
       - appliedColumnTests:
           hasNull: false
