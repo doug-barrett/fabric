@@ -2,7 +2,7 @@ fileVersion: 1
 id: "360"
 isDisabled: false
 metadata:
-  defaultStorageLocation: null
+  defaultStorageLocation: SILVER
   error: null
   nodeMetadataSpec: |-
     capitalized: COPY
