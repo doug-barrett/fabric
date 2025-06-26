@@ -1,6 +1,0 @@
-excludeSelector: ""
-fileVersion: 1
-id: "135"
-includeSelector: "+{ location: GOLD name: FCT_ORDER_LINES }"
-name: New Job
-type: Job

@@ -1,6 +1,0 @@
-excludeSelector: ""
-fileVersion: 1
-id: "133"
-includeSelector: "+{ location: GOLD name: FCT_* } "
-name: Process Data mart
-type: Job
