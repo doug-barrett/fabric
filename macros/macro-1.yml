@@ -1,0 +1,12 @@
+fileVersion: 1
+id: "1"
+macroString: |+
+  {% macro ref_dl(location,node) %}
+      {%- set location = storageLocations | selectattr('name', 'equalto', location) | first -%}
+    [{{location.database}}].{{ ref(location.name,node) }}
+  {%- endmacro %}
+
+
+
+name: macro
+type: Macro
